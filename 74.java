@@ -9,7 +9,7 @@ public class GeneradorAcronimo {
         
         String acronimo = "ETSETB";
         String acronimoCompleto = "Escola Tècnica Superior Enginyeria Telecomunicació Barcelona";
-        String siNo = "Su acronimo no se a podido leer :-(";
+        String siNo = "Su acronimo no se ha podido leer :-(";
         
         if (text.equals(acronimo) == true) {
            System.out.println(acronimoCompleto);
