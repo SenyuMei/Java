@@ -1,0 +1,30 @@
+public class TestAulaPOO {
+    
+    public static void main (String[] args){
+        AulaPOO aula = new AulaPOO(30);
+        
+        AlumnePOO a1 = new AlumnePOO("Nom a1", "NIF a1");
+        AlumnePOO a2 = new AlumnePOO("Nom a2", "NIF a2");
+        AlumnePOO a3 = new AlumnePOO("Nom a3", "NIF a3");
+        AlumnePOO a4 = new AlumnePOO("Nom a4", "NIF a4");
+        AlumnePOO a5 = new AlumnePOO("Nom a5", "NIF a5");
+        
+        
+        aula.matriculaAlumne(a1);
+        aula.matriculaAlumne(a1);
+        aula.matriculaAlumne(a2);
+        aula.matriculaAlumne(a3);
+        aula.matriculaAlumne(a4);
+        aula.matriculaAlumne(a5);
+        
+        aula.esborreaALumne("NIF a2");
+        
+        
+        
+        System.out.println("Nombre d'alumnes matriculats: " + aula.getNumeroAlumnesMatriculats());
+                
+        aula.llistaInfoAlumnesPerPantalla();
+        
+    }
+    
+}
