@@ -1,0 +1,51 @@
+    private int numero;
+    private LinkedList<AlumnePOO> matriculats;
+    
+    public AulaPOO(int numero){
+        this.numero = numero;
+        this.matriculats = new LinkedList<>();
+    }
+    
+    public int getNumeroAlumnesMatriculats(){
+        return this.matriculats.size();
+    }
+    public void matriculaAlumne (AlumnePOO alumne){
+        
+        //nomes matriculem si el alumne no existeix a la aula
+        if(this.cercaAlumne(alumne.getNif()) == null)
+            this.matriculats.add(alumne);
+        
+    }
+    public void llistaInfoAlumnesPerPantalla(){
+        Iterator<AlumnePOO> it = this.matriculats.iterator();
+        while (it.hasNext()){
+            AlumnePOO a = it.next();
+            System.out.println(a.getNom() + " - " + a.getNif());
+        }
+    }
+    public AlumnePOO cercaAlumne(String nif){
+        AlumnePOO buscat = null;
+        Iterator<AlumnePOO> it = this.matriculats.iterator();
+        while(it.hasNext() && buscat == null){
+            AlumnePOO a = it.next();
+            if(a.getNif().equals(nif))
+                buscat = a;
+        }
+        return buscat; //segueix  sent null 
+    }
+    
+    public boolean esborreaALumne(String nif){
+        //Cerquem si existeix l'alumne amb aquest NIF i per tant el podem eliminar
+        AlumnePOO a = this.cercaAlumne(nif);
+        
+        if (a == null )
+            return false; //perque l'alumne no exiteix amb aquest nif
+        
+        this.matriculats.remove(a);
+        return true;
+        
+        
+    }
+    
+    
+}
