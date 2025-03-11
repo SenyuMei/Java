@@ -1,0 +1,64 @@
+package main;
+
+public class complex
+{
+		//Declaració dels atributs dels objectes complex
+		private double real, imaginaria;
+		
+		//Implementació de constructor
+		public complex()
+		{
+		    this.real = 0.0;
+		    this.imaginaria = 0.0;
+		}
+		
+		public complex(double real, double imaginaria)
+		{
+		    this.real = real;
+		    this.imaginaria = imaginaria;
+		}
+		
+		public complex(complex c)
+		{
+		    this.real = c.real;
+		    this.imaginaria = c.imaginaria;
+		}
+
+		//Implementació de mètodes accesors
+		public double getReal()
+		{
+		    return this.real;
+		}
+		
+		public double getImaginaria()
+		{
+		    return this.imaginaria;
+		}
+		
+		public void setReal (double real)
+		{
+		    this.real = real; 
+		}
+		public void setImaginaria ( double imaginaria)
+		{
+		    this.imaginaria = imaginaria;
+		}
+		
+		//resta de mètodes de la classe
+		@Override
+		public String toString()
+		{
+		    String s = "";
+		    
+		    s += this.real;
+		    if (this.imaginaria >= 0)
+		        s += " +";
+		    else 
+		        s += " ";
+		       
+		    s += this.imaginaria +"i"; 
+		    
+		    return(s);
+		}
+	}
+
