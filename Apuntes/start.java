@@ -1,5 +1,5 @@
 // para iniciar un programa en java se debe de empezar por
-
+//codigo probablemente en java script
 public class CMyApplicaition {
     public static void main (String[] args) {
       
