@@ -1,0 +1,18 @@
+public class TestEstudisDeGrau {
+    public static void main(String[] args) {
+        EstudisGrau eg = new EstudisGrau("GRETST");
+        
+        Assignatura a1 =  new Assignatura ("POO", 1224, 1);
+        Assignatura a2 =  new Assignatura ("FO", 21212, 1);
+        Assignatura a3 =  new Assignatura ("PBE", 3222, 3);
+        Assignatura a4 =  new Assignatura ("AST", 22213, 2);
+        
+        eg.addAssignatura(a1);
+        eg.addAssignatura(a2);
+        eg.addAssignatura(a3);
+        eg.addAssignatura(a4);
+        
+        eg.llistaInfoAssignatura();
+    }
+    
+}
