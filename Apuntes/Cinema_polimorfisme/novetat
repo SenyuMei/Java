@@ -8,28 +8,23 @@ package main;
  *
  * @author dario
  */
-public abstract class Pelicula {
+public class Novetat extends Pelicula{
     
-    protected String titol, llistaActors,idioma;
-    protected int duracio;
-    
-    public Pelicula(String titol, String llistaActors, String idioma, int duracio){
-        this.titol = titol;
-        this.llistaActors = llistaActors;
-        this.idioma = idioma;
-        this.duracio = duracio;
+    public Novetat (String titol, String llistaActors, String idioma, int duracio){
+        super(titol, llistaActors, idioma, duracio);
         
     }
     
-    public abstract double getPreu();
-    
+    public double getPreu(){
+        return 9.0;
+    }
+    @Override
     public String toString(){
-        //part comu
+        String s = super.toString();
+        s += "NOVETAT";
         
-        return null;
+        return s;
     }
-       
-    
     
     
 }
